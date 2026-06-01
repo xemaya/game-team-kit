@@ -1,7 +1,7 @@
 # Active Board — game-team-kit
 
 > 这个仓自托管(dogfooding):裸 `claude` = director,开局自动看到这块 backlog。
-> Last refreshed: 2026-06-01(仓创建 + 自托管 director · 接外部 AI review)
+> Last refreshed: 2026-06-01(P0 机器 gate 范例 + P1 README 去浮夸 完成)
 
 ## 🔜 backlog(源自外部 AI review · GitHub issue #1)
 
@@ -9,8 +9,8 @@
 
 | P | 任务 | 内容 | 状态 |
 |---|---|---|---|
-| **P0** | **补真机器 gate 范例** | 把 combo-hopper 的 `tools/solver.ts`(关卡通关求解器)当范例放进 `examples/gates/` + 给通用骨架(schema 校验 / API contract snapshot / e2e console-error probe 模板)。**这条补完,灵魂才落地** | ⬜ todo |
-| **P1** | README 去浮夸 | quickstart 老实说"SOP+脚手架,非一键工具";「适用/不适用」提到最前(单人/单领域/纯审美验收/没想清需求=别用) | ⬜ todo |
+| **P0** | **补真机器 gate 范例** | ~~把 combo-hopper solver 当范例 + 通用骨架~~ → **DONE**:`examples/gates/` 落 4 类**零依赖可真跑**范例(domain-audit solver / schema·不变量 / API 契约 snapshot / e2e console-probe),各带 gate 自验测试(19/19 过)。methodology §4 已链过去。**灵魂从文字变可执行**(DEC-002) | ✅ done |
+| **P1** | README 去浮夸 | **DONE**:副标题改「SOP+脚手架,非一键工具」· 《先看:适合你吗?》提到全文最前(「别用」四条前置)· 软约束 ⚠️ 诚实标注 · 删底部重复段 · 链入 examples/gates(DEC-003) | ✅ done |
 | **P2** | hook 自测 | inject-role.sh + bootstrap 0 测试;给 hook 一个 smoke test | ⬜ todo |
 | **P3** | 非游戏角色模板 | 9 角色太游戏化;给 backend/data/ml/devops 的 persona+agent.md 变体 | ⬜ todo |
 
@@ -23,6 +23,8 @@
 
 - 2026-06-01 仓初始化(模板 + skill + bootstrap + 9 persona/agent + hook)· 公开发布 github.com/xemaya/game-team-kit · SKILL 改"先聊产品再推荐栈+角色"。
 - 2026-06-01 自托管 director(根 .claude/ + 本 board)—— 让下个 session 一进来就知道 backlog。
+- 2026-06-01 **P0 机器 gate 范例落地**:`examples/gates/`(4 类 · Node22 原生 TS · 零安装 · 19 自验测试)+ methodology §4 双向链 + DEC-002。issue #1 P0 关。
+- 2026-06-01 **P1 README 去浮夸**:定位改「SOP+脚手架,非一键」· 适用/不适用前置 · 软约束诚实标注(DEC-003)。issue #1 P1 关。
 
 ## 集成日记
 
