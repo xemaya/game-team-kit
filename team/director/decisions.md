@@ -4,6 +4,19 @@
 
 ---
 
+## DEC-004 · 合并 image-work-flow 思想:资产域「锚定—派生」纳入方法论(不搬工具) · 2026-06-02
+- Date: 2026-06-02
+- Status: accepted
+- 上下文:用户要把 sibling 仓 `image-work-flow`(Manus 同款两阶段生图 CLI · Python · DeerAPI · 54 测试)的工作流「总结合并」进 kit。核心诉求是**思想**(根据游戏风格出概念图 → 派生角色图 → 资产不跑偏),非搬代码。
+- 判断:image-work-flow 的反漂移机制 = kit 防漂移三件套 + 机器 gate 在**视觉资产域**的同构实例。映射:概念锚图≈decisions.md(宪法)· 每张重申不变量≈append-only 记忆 · 两阶段探索→生产≈DD-first/scope 锁 · anchor.md 机器抽取+人工 checkpoint≈视觉 detection-gate · manifest schema/chroma 残留/lock hash≈机器 gate+记账。
+- 决定:
+  1. **不把 Python 工具/CLI 细节(成本表、flag、chroma 阈值)搬进 kit** —— kit 是工具无关的 SOP 脚手架。只蒸馏可迁移思想。
+  2. 新 SOP 文档 `workflow/asset-pipeline.md`(与 bootstrap-studio.md 平级):两阶段 + 锚定派生 + 重申不变量 + 一致性 gate,工具无关;`image-work-flow` 仅作「参考实现」末尾引用。换任何生图后端套路不变。
+  3. methodology.md §4 加子节「资产一致性 gate:锚定—派生」,把它接回防漂移哲学(思想层,链向 workflow 文档)。
+  4. 更新 art persona + art agent 模板,把 concept→asset 锚定工作流写进角色协议(方向锁 raise DEC、探索→生产、anchor 人工 checkpoint、同框比对 gate)。
+- 后果:kit 多一个「资产域」防漂移实例,art 角色从抽象 persona 变成有可执行 SOP。强调四点不变量(两阶段 / 锚定派生 / 重申不变量 / 一致性 gate)即可换后端。
+- 关联:`workflow/asset-pipeline.md`、methodology.md §4、templates/personas/art.md、templates/.claude/agents/art.md、sibling 仓 image-work-flow。
+
 ## DEC-003 · README 定调:「SOP+脚手架,非一键工具」+ 软约束诚实标注 · 2026-06-01
 - Date: 2026-06-01
 - Status: accepted

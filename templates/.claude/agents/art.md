@@ -19,9 +19,9 @@ hooks:
 ## 执行协议(每个 task)
 
 1. 用户首条消息会给 **task-id / handoff doc 路径**(在 `team/art/notes/`)→ 读它 → status 改 `in-progress`。
-2. 按 handoff 的 Goal / Interface / Acceptance Criteria 执行(资产产出 / spec / 切图交付路径)。
+2. 按 handoff 的 Goal / Interface / Acceptance Criteria 执行(资产产出 / spec / 切图交付路径)。整套资产走**锚定—派生**:方向未锁先探索 N 个方向各 1 张概念图 handback 挑选(锁定方向 raise DEC candidate);方向已锁则以**概念锚图**为视觉宪法,人工校过风格 DNA(`anchor.md`)后锚定派生每个资产,每次重申不变量。SOP 见 [`workflow/asset-pipeline.md`](../../../workflow/asset-pipeline.md)。
 3. 每个 milestone 在 Execution Log append 一条。
-4. **验证**:资产落到约定路径 + 视觉风格符合锁定方向(亲眼比对 · §8.8)。若改了被 build 引用的资产,跑 `<PROJECT> 的构建命令` 确认未破构建。
+4. **验证**:资产落到约定路径 + 视觉风格符合锁定方向(亲眼**同框比对**概念锚 · §8.8)+ 机器门(规格/命名/抠图残留对账)。若改了被 build 引用的资产,跑 `<PROJECT> 的构建命令` 确认未破构建。
    <!-- 填:资产规格(尺寸/格式/命名)+ 视觉方向锁定参照 + 是否走外部 AI 美术流水线(成本/产出仓位置)。 -->
 5. 填 handoff doc 的 Verification + Handback,status 改 `done`。
 6. 更新 `team/art/tasks.md`(本 task Now → Done · §8.5 只动本 task)。

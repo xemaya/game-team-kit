@@ -76,6 +76,7 @@ game-team-kit/
 ├── examples/gates/                 # 机器 gate 的可跑范例(4 类 · 零依赖 · node 直接跑)
 ├── skill/SKILL.md                  # 可调用 skill:为新项目 bootstrap 这套工作室
 ├── workflow/bootstrap-studio.md    # bootstrap 流程(interview 需求 → 选角色 → scaffold)
+├── workflow/asset-pipeline.md      # 资产防漂移 SOP(锚定—派生:概念锚 → 派生角色/资产 → 一致性 gate)
 └── templates/                      # 拷进新项目的脚手架(带 <PROJECT>/<role> 占位符)
     ├── HARNESS.md                  # 通用全局约束骨架(硬规矩 + 占位 + 填写指引)
     ├── CLAUDE-snippet.md           # 给新项目 CLAUDE.md 的「派工模型」段落
@@ -95,6 +96,7 @@ game-team-kit/
 | 理解这套方法论为什么这么设计 | [`docs/methodology.md`](docs/methodology.md) |
 | 看机器 gate 长什么样、怎么真跑 | [`examples/gates/`](examples/gates/) |
 | 在新项目里展开工作室 | [`skill/SKILL.md`](skill/SKILL.md) + [`workflow/bootstrap-studio.md`](workflow/bootstrap-studio.md) |
+| 出一整套风格不跑偏的美术资产 | [`workflow/asset-pipeline.md`](workflow/asset-pipeline.md) |
 | 看全局铁律怎么写 | [`templates/HARNESS.md`](templates/HARNESS.md) |
 | 看派工协议 / §8 process 金条款 | [`templates/handoff-protocol.md`](templates/handoff-protocol.md) |
 | 看某个角色定位 | [`templates/personas/<role>.md`](templates/personas/) |

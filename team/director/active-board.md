@@ -1,7 +1,7 @@
 # Active Board — game-team-kit
 
 > 这个仓自托管(dogfooding):裸 `claude` = director,开局自动看到这块 backlog。
-> Last refreshed: 2026-06-01(P0 机器 gate 范例 + P1 README 去浮夸 完成)
+> Last refreshed: 2026-06-02(合并 image-work-flow「锚定—派生」资产 SOP · DEC-004)
 
 ## 🔜 backlog(源自外部 AI review · GitHub issue #1)
 
@@ -25,7 +25,9 @@
 - 2026-06-01 自托管 director(根 .claude/ + 本 board)—— 让下个 session 一进来就知道 backlog。
 - 2026-06-01 **P0 机器 gate 范例落地**:`examples/gates/`(4 类 · Node22 原生 TS · 零安装 · 19 自验测试)+ methodology §4 双向链 + DEC-002。issue #1 P0 关。
 - 2026-06-01 **P1 README 去浮夸**:定位改「SOP+脚手架,非一键」· 适用/不适用前置 · 软约束诚实标注(DEC-003)。issue #1 P1 关。
+- 2026-06-02 **合并 image-work-flow 思想**:蒸馏 Manus 两阶段生图工作流为工具无关 SOP `workflow/asset-pipeline.md`(两阶段探索→生产 / 锚定派生 / 重申不变量 / 一致性 gate)+ methodology §4 子节 + art persona/agent 落地(DEC-004)。**不搬 Python 工具**,只纳思想 —— 资产域成为防漂移三件套的又一实例。
 
 ## 集成日记
 
 - 2026-06-01 · 外部 AI review → 用户认可 → 落 issue #1 + 自托管 director。教训:**只在对话里说的会丢;写进 board/issue/decisions 才活**。
+- 2026-06-02 · 用户给 sibling 仓 image-work-flow,要「总结合并思想」非搬工具。判断:它是防漂移哲学在视觉域的同构实例 → 只蒸馏 SOP + 接回 methodology,Python/CLI 细节留在原仓作「参考实现」。教训:**外部好工具入 kit,先问「它的可迁移思想是什么」,别把实现耦合塞进通用脚手架**(同 DEC-002 对 combo-hopper solver 的处理)。

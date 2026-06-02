@@ -145,6 +145,21 @@ build   产物能构建出来
 
 > 这条「先验证验证器」在范例里是 [`examples/gates/domain-audit/solver.test.ts`](../examples/gates/domain-audit/solver.test.ts):求解器必须在已知可解关说「能解」、在已知死局说「无解」(no-path,而非「没搜完」),通过了才信它的 audit 结论。
 
+### 资产一致性 gate:锚定—派生(防资产漂移)
+
+机器 gate 不止管代码。**视觉资产**(角色图 / 场景 / 图标)同样会漂:只靠文字 style prompt,跨多张一致性大概只到 65–75%,第 3 张角色的描边/配色/视角就和第 1 张对不上了。
+
+防法是把防漂移三件套**套到视觉域**:
+
+> **先出一张概念锚图当「视觉宪法」,再从它派生所有资产,每次生成都重申不变量,机器+人守一致性门。**
+
+- 概念锚图 ≈ `decisions.md`(权威源,派生不重新发挥);每张资产**重申风格 DNA** ≈ append-only 记忆,不让模型「忘记」宪法。
+- 流程分**两阶段**:先廉价并行探索 N 个视觉方向 → 锁定 1 个 → 再批量生产。对应 §8 DD-first(方向是可逆的探索期决策,定了就锁)。
+- 风格 DNA(`anchor.md`)可机器抽取,但**必须人工 checkpoint 补漏**(vision 模型常把 3/4 视角误判成 top-down,会传染所有后续资产)—— 正是上面「视觉 detection-gate:机器守能守的,人签人眼的」。
+- 一致性 gate:manifest schema 校验 / 抠图残留对账 / prompt+image hash 进 lock 文件(可复现、PR 可 diff)。
+
+**这不是新方法论,是同一套思想换了介质。** 完整 SOP + 落地参考实现见 [`../workflow/asset-pipeline.md`](../workflow/asset-pipeline.md)。
+
 ---
 
 ## 5 / 进化史:从「手动启动咒」到 `claude --agent` + hook
